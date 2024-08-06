@@ -123,9 +123,9 @@ export default function ({ navigation }) {
     const markerID = mapEventData._targetInst.return.key;
 
     let x = (markerID * CARD_WIDTH) + (markerID * 20); 
-    if (Platform.OS === 'ios') {
-      x = x - SPACING_FOR_CARD_INSET;
-    }
+    // if (Platform.OS === 'ios') {
+    //   x = x - SPACING_FOR_CARD_INSET;
+    // }
 
     _scrollView.current.scrollTo({x: x, y: 0, animated: true});
   }
@@ -137,6 +137,7 @@ export default function ({ navigation }) {
       ? <Loading/>
       : 
     <MapView
+      showsUserLocation={true}
       style={{
         flex: 1,
         // marginTop: -50
@@ -205,7 +206,7 @@ export default function ({ navigation }) {
     })}
     <View style={{
     position:'absolute', 
-    marginTop: Platform.OS === 'ios' ? 40 : 20, 
+    marginTop: true ? 40 : 20, 
     flexDirection:"row",
     backgroundColor: '#fff',
     width: '70%',

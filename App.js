@@ -5,7 +5,7 @@ import { ThemeProvider } from "react-native-rapi-ui";
 import { LogBox } from "react-native";
 import { Logs } from 'expo'
 
-Logs.enableExpoCliLogging()
+// Logs.enableExpoCliLogging()
 
 
 export default function App() {
